@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('partials/navbar') %>
+  <h1><%= title %></h1>
+  
+  <% blogPosts.forEach(post => { %>
+    <article>
+      <h2><%= post.title %></h2>
+      <p><em>Posted on <%= post.date %> by <%= post.author %></em></p>
+      <p><%= post.content %></p>
+    </article>
+  <% }); %>
+  <div class="scroll-animate">
+  </div>
+</body>
+</html>
